@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  push:
+    branches:
+      - main
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+      
+      - name: Install Nix
+        id: install-nix
+        uses: cachix/install-nix-action@v18
+
+      - name: Run unit tests
+        id: test-unit
+        run: nix-shell --run "stack test"

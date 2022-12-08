@@ -1,0 +1,9 @@
+# https://www.stackage.org/lts-19.32
+resolver: lts-19.32
+packages:
+  - .
+nix:
+  enable: true
+  pure: false
+  # See https://docs.haskellstack.org/en/stable/nix_integration/#using-a-custom-shellnix-file
+  shell-file: ./shell.nix
