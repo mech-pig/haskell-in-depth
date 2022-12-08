@@ -1,0 +1,1 @@
+We don’t have to write a program to use GHCi to compute the number of unique words used in a text file. We just need to fire up GHCi (let’s do that in the root folder of the hid-examples package), import a couple of modules for processing lists and characters, read the given file into a String, and then manipulate its content, as shown in the next code:
