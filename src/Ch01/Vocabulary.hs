@@ -10,18 +10,14 @@ module Ch01.Vocabulary
 where
 
 import Data.Char (isAlphaNum)
-import Data.Foldable (traverse_)
 import qualified Data.HashMap.Lazy as HM
 import Data.List (group, sort, sortBy)
 import Data.Ord (Ordering)
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
-import Data.Tuple (swap)
-import System.Environment (getArgs)
 
-main :: IO ()
-main = do
-  [filePath] <- getArgs
+main :: String -> IO ()
+main filePath = do
   log ("reading file: " <> T.pack filePath)
   text <- TIO.readFile filePath
   log ("extracting top " <> T.pack (show n) <> " words")

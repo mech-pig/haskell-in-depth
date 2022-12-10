@@ -24,6 +24,7 @@ source-repository head
 
 library
   exposed-modules:
+      Ch01.Hangman
       Ch01.Vocabulary
   other-modules:
       Paths_haskell_in_depth
@@ -31,6 +32,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , random
     , tasty
     , tasty-hunit
     , text
@@ -47,6 +49,7 @@ executable haskell-in-depth
   build-depends:
       base >=4.7 && <5
     , haskell-in-depth
+    , random
     , tasty
     , tasty-hunit
     , text
@@ -66,6 +69,7 @@ test-suite haskell-in-depth-test
   build-depends:
       base >=4.7 && <5
     , haskell-in-depth
+    , random
     , tasty
     , tasty-hunit
     , text
