@@ -26,6 +26,9 @@ library
   exposed-modules:
       Ch01.Hangman
       Ch01.Vocabulary
+      Ch02.Typeclassopedia.Applicative
+      Ch02.Typeclassopedia.Data
+      Ch02.Typeclassopedia.Functor
   other-modules:
       Paths_haskell_in_depth
   hs-source-dirs:
@@ -62,6 +65,11 @@ test-suite haskell-in-depth-test
   other-modules:
       Ch01.Suite
       Ch01.VocabularyTest
+      Ch02.Suite
+      Ch02.Typeclassopedia.ApplicativeTest
+      Ch02.Typeclassopedia.FunctorTest
+      Ch02.Typeclassopedia.Suite
+      Ch02.Typeclassopedia.TestUtils
       Paths_haskell_in_depth
   hs-source-dirs:
       test

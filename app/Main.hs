@@ -10,4 +10,5 @@ main = do
   case args of
     ["hangman"] -> Ch01.Hangman.main
     ["vocabulary", filePath] -> Ch01.Vocabulary.main filePath
+    ["typeclassopedia"] -> putStrLn "tbd"
     _ -> putStrLn "invalid args"
