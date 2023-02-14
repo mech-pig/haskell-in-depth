@@ -7,3 +7,7 @@ nix:
   pure: false
   # See https://docs.haskellstack.org/en/stable/nix_integration/#using-a-custom-shellnix-file
   shell-file: ./shell.nix
+
+build:
+  benchmark-opts:
+    benchmark-arguments: "--regress allocated"
