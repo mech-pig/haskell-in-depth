@@ -11,10 +11,10 @@ import Data.Functor ((<$>))
 import Data.Int (Int)
 import Data.Maybe (Maybe)
 import Data.Ord (comparing)
-import Prelude (fromEnum, id, ($), (+), (.), (==))
+import Prelude (fromEnum, id, uncurry, ($), (+), (.), (==))
 
 run :: Foldable f => f Person -> Stats
-run = (\(f, o) -> Stats f o) . fold ((,) <$> countFemales <*> oldest)
+run = uncurry Stats . fold ((,) <$> countFemales <*> oldest)
 
 countIf :: (a -> Bool) -> Fold a Int
 countIf pred = Fold (\t b -> (+ t) . fromEnum . pred $ b) 0 id
