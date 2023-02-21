@@ -23,6 +23,7 @@ dependencies:
 - bytestring >=0.10 && <0.11
 - cassava >=0.5 && <0.6
 - foldl
+- parsec
 - random
 - tasty
 - tasty-hunit

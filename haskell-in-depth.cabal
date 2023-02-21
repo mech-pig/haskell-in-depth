@@ -34,6 +34,9 @@ library
       Ch03.CsvMasterChallenge.Fold.FoldMap
       Ch03.CsvMasterChallenge.Fold.SimpleFold
       Ch03.CsvMasterChallenge.Main
+      Ch05.Expressions
+      Ch05.Expressions.Data
+      Ch05.Expressions.Parsec
   other-modules:
       Paths_haskell_in_depth
   hs-source-dirs:
@@ -43,6 +46,7 @@ library
     , bytestring ==0.10.*
     , cassava ==0.5.*
     , foldl
+    , parsec
     , random
     , tasty
     , tasty-hunit
@@ -65,6 +69,7 @@ executable haskell-in-depth
     , cassava ==0.5.*
     , foldl
     , haskell-in-depth
+    , parsec
     , random
     , tasty
     , tasty-hunit
@@ -87,6 +92,8 @@ test-suite haskell-in-depth-test
       Ch02.Typeclassopedia.TestUtils
       Ch03.CsvMasterChallengeTest
       Ch03.Suite
+      Ch05.ExpressionsTest
+      Ch05.Suite
       Paths_haskell_in_depth
   hs-source-dirs:
       test
@@ -97,6 +104,7 @@ test-suite haskell-in-depth-test
     , cassava ==0.5.*
     , foldl
     , haskell-in-depth
+    , parsec
     , random
     , tasty
     , tasty-hunit
