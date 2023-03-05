@@ -37,6 +37,7 @@ library
       Ch05.Expressions
       Ch05.Expressions.Data
       Ch05.Expressions.Parsec
+      Ch05.RPN
   other-modules:
       Paths_haskell_in_depth
   hs-source-dirs:
@@ -46,12 +47,14 @@ library
     , bytestring ==0.10.*
     , cassava ==0.5.*
     , foldl
+    , mtl
     , parsec
     , random
     , tasty
     , tasty-hunit
     , text
     , time >=1.8 && <1.11
+    , transformers
     , unordered-containers
     , vector
   default-language: Haskell2010
@@ -69,12 +72,14 @@ executable haskell-in-depth
     , cassava ==0.5.*
     , foldl
     , haskell-in-depth
+    , mtl
     , parsec
     , random
     , tasty
     , tasty-hunit
     , text
     , time >=1.8 && <1.11
+    , transformers
     , unordered-containers
     , vector
   default-language: Haskell2010
@@ -93,6 +98,7 @@ test-suite haskell-in-depth-test
       Ch03.CsvMasterChallengeTest
       Ch03.Suite
       Ch05.ExpressionsTest
+      Ch05.RPNTest
       Ch05.Suite
       Paths_haskell_in_depth
   hs-source-dirs:
@@ -104,12 +110,14 @@ test-suite haskell-in-depth-test
     , cassava ==0.5.*
     , foldl
     , haskell-in-depth
+    , mtl
     , parsec
     , random
     , tasty
     , tasty-hunit
     , text
     , time >=1.8 && <1.11
+    , transformers
     , unordered-containers
     , vector
   default-language: Haskell2010
@@ -130,11 +138,14 @@ benchmark haskell-in-depth-bench
     , criterion
     , foldl
     , haskell-in-depth
+    , mtl
+    , parsec
     , random
     , tasty
     , tasty-hunit
     , text
     , time >=1.8 && <1.11
+    , transformers
     , unordered-containers
     , vector
   default-language: Haskell2010
