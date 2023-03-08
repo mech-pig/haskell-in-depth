@@ -37,7 +37,9 @@ library
       Ch05.Expressions
       Ch05.Expressions.Data
       Ch05.Expressions.Parsec
+      Ch05.Protected
       Ch05.RPN
+      Ch05.StructLog
   other-modules:
       Paths_haskell_in_depth
   hs-source-dirs:
